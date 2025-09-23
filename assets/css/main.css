@@ -46,4 +46,9 @@ img:hover {
 .big-font {
   font-size: 112%;
 }
+
+/* Sekcija O nama */
+main img {
+  border: 4px solid rgba(255, 255, 255, 0.2);
+}
 /*# sourceMappingURL=main.css.map */
