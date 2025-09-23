@@ -9,27 +9,28 @@
 </head>
 <body>
   <!-- Navigacija -->
-  <header class="sticky-top shadow-sm">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container">
-        <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
-          <img src="../assets/icons/logo.png" alt="Logo" width="36" height="36">
-          <span>Astronomska opservatorija</span>
-        </a>
-        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div id="nav" class="collapse navbar-collapse">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="o-nama.html">O nama</a></li>
-            <li class="nav-item"><a class="nav-link" href="dogadjaji.html">Događaji</a></li>
-            <li class="nav-item"><a class="nav-link active" href="galerija.html">Galerija</a></li>
-            <li class="nav-item"><a class="nav-link" href="kontakt.html">Kontakt</a></li>
-          </ul>
-        </div>
+  <header class="main-header sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
+        <img src="../assets/icons/logo.png" alt="Logo" width="40" height="40" onerror="this.src='https://via.placeholder.com/40x40?text=★'">
+        <span>Astronomska opservatorija</span>
+      </a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="o-nama.html">O nama</a></li>
+          <li class="nav-item"><a class="nav-link" href="dogadjaji.html">Događaji</a></li>
+          <li class="nav-item"><a class="nav-link active" href="galerija.html">Galerija</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+        </ul>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
+</header>
+
 
   <!-- Sadržaj -->
   <main class="container py-5">
@@ -38,10 +39,10 @@
   </main>
 
   <!-- Footer -->
-  <footer class="border-top py-4">
-    <div class="container small d-flex justify-content-between">
+  <footer class="main-footer py-4">
+    <div class="container small">
       <span>&copy; 2025 Astronomska opservatorija</span>
-      <a href="#" id="contrastToggle" class="link-secondary">Visoki kontrast</a>
+      <a href="#" id="contrastToggle">Visoki kontrast</a>
     </div>
   </footer>
 

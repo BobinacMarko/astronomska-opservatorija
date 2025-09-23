@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Glavni SCSS */
 /* Promenljive */
 /* Global */
@@ -11,6 +12,60 @@ body {
   color: #fff;
 }
 
+/* Header / Navbar */
+.main-header {
+  background: linear-gradient(180deg, rgba(11, 15, 46, 0.95), rgba(26, 31, 71, 0.95));
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+.main-header .navbar-brand {
+  font-weight: 700;
+  color: #fff !important;
+}
+.main-header .navbar-brand img {
+  filter: drop-shadow(0 0 4px rgba(76, 201, 240, 0.7));
+}
+.main-header .navbar-brand span {
+  font-size: 1.2rem;
+}
+.main-header .nav-link {
+  color: #ddd !important;
+  font-weight: 500;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+}
+.main-header .nav-link:hover {
+  color: #4cc9f0 !important;
+}
+.main-header .nav-link.active {
+  color: #4cc9f0 !important;
+  font-weight: 600;
+  border-bottom: 2px solid #4cc9f0;
+}
+.main-header .navbar-toggler {
+  border: none;
+}
+.main-header .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* Dugmad za pristupačnost */
+.accessibility-tools button {
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.accessibility-tools button:hover {
+  background: #4cc9f0;
+  color: #0b0f2e;
+  border-color: #4cc9f0;
+}
+
 /* Hero sekcija */
 .hero {
   background: radial-gradient(ellipse at center, #0b1225 0%, #050816 100%);
@@ -21,15 +76,11 @@ body {
 
 /* Efekat hover slike */
 img {
-  -webkit-transition: -webkit-transform .3s ease;
-  transition: -webkit-transform .3s ease;
-  transition: transform .3s ease;
-  transition: transform .3s ease, -webkit-transform .3s ease;
+  transition: transform 0.3s ease;
 }
 
 img:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 /* Visoki kontrast */
@@ -37,18 +88,201 @@ img:hover {
   background-color: #000 !important;
   color: #fff !important;
 }
-
-.high-contrast a {
-  color: #0ff !important;
+.high-contrast a, .high-contrast h1, .high-contrast h2, .high-contrast h3, .high-contrast h4, .high-contrast h5, .high-contrast h6, .high-contrast p, .high-contrast span, .high-contrast label {
+  color: #fff !important;
+}
+.high-contrast .card, .high-contrast .form-control, .high-contrast footer, .high-contrast header {
+  background: #000 !important;
+  border: 1px solid #fff !important;
+}
+.high-contrast button, .high-contrast .btn {
+  background: #fff !important;
+  color: #000 !important;
+  border: 1px solid #fff !important;
+}
+.high-contrast button:hover, .high-contrast .btn:hover {
+  background: #4cc9f0 !important;
+  color: #000 !important;
 }
 
 /* Veliki font */
 .big-font {
-  font-size: 112%;
+  font-size: 120% !important;
+  line-height: 1.6 !important;
+}
+.big-font h1, .big-font h2, .big-font h3, .big-font h4, .big-font h5, .big-font h6 {
+  font-size: 110% !important;
 }
 
 /* Sekcija O nama */
 main img {
   border: 4px solid rgba(255, 255, 255, 0.2);
 }
-/*# sourceMappingURL=main.css.map */
+
+/* Kontakt – uvod */
+.kontakt-header {
+  background: linear-gradient(180deg, #0b0f2e, #1a1f47);
+  padding: 60px 0 20px;
+  text-align: center;
+}
+.kontakt-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+.kontakt-header p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+/* Kontakt – info sekcija */
+.kontakt-info {
+  background: #f8f9fa;
+  color: #000;
+  padding: 50px 0;
+}
+.kontakt-info h3 {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.kontakt-info ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+.kontakt-info iframe {
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Kontakt – forma */
+.kontakt-forma {
+  padding: 80px 0;
+  background: linear-gradient(180deg, #0b0f2e 0%, #1a1f47 100%);
+  color: #fff;
+}
+.kontakt-forma h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f1f1f1;
+}
+.kontakt-forma p {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1rem;
+  color: #ccc;
+}
+.kontakt-forma form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+}
+.kontakt-forma form label {
+  font-weight: 500;
+  color: #ddd;
+}
+.kontakt-forma form .form-control {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border-radius: 10px;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+.kontakt-forma form .form-control::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
+.kontakt-forma form .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
+.kontakt-forma form .form-control:focus {
+  border-color: #4cc9f0;
+  box-shadow: 0 0 8px rgba(76, 201, 240, 0.7);
+}
+.kontakt-forma form textarea {
+  resize: none;
+}
+.kontakt-forma form .btn {
+  display: block;
+  width: 100%;
+  background: #4cc9f0;
+  border: none;
+  padding: 12px;
+  font-weight: 600;
+  border-radius: 10px;
+  color: #0b0f2e;
+  transition: all 0.3s ease;
+}
+.kontakt-forma form .btn:hover {
+  background: #4895ef;
+  box-shadow: 0 0 12px rgba(72, 149, 239, 0.8);
+}
+.kontakt-forma #formMessage {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 600;
+}
+.kontakt-forma #formMessage .text-success {
+  color: #90f990;
+}
+.kontakt-forma #formMessage .text-danger {
+  color: #ff6b6b;
+}
+
+/* Footer */
+.main-footer {
+  background: linear-gradient(180deg, #0b0f2e, #050816);
+  color: #ccc;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 50px 0 30px;
+}
+.main-footer h5, .main-footer h6 {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.main-footer p, .main-footer li {
+  margin-bottom: 6px;
+}
+.main-footer ul {
+  padding: 0;
+  list-style: none;
+}
+.main-footer a {
+  color: #4cc9f0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.main-footer a:hover {
+  color: #4895ef;
+  text-decoration: underline;
+}
+.main-footer .social-links a {
+  font-size: 1.3rem;
+  margin-right: 12px;
+  color: #4cc9f0;
+}
+.main-footer .social-links a:hover {
+  color: #4895ef;
+}
+.main-footer .footer-bottom {
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+.main-footer .footer-bottom a {
+  margin-left: 15px;
+  font-size: 0.8rem;
+}/*# sourceMappingURL=main.css.map */
