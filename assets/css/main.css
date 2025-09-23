@@ -1,0 +1,49 @@
+/* Glavni SCSS */
+/* Promenljive */
+/* Global */
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #0b1225;
+  color: #fff;
+}
+
+/* Hero sekcija */
+.hero {
+  background: radial-gradient(ellipse at center, #0b1225 0%, #050816 100%);
+  min-height: 60vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efekat hover slike */
+img {
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+}
+
+img:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+/* Visoki kontrast */
+.high-contrast {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.high-contrast a {
+  color: #0ff !important;
+}
+
+/* Veliki font */
+.big-font {
+  font-size: 112%;
+}
+/*# sourceMappingURL=main.css.map */
