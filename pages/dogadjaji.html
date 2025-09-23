@@ -9,10 +9,10 @@
 </head>
 <body>
   <!-- Navigacija -->
-  <header class="site-header">
-    <nav class="navbar navbar-expand-lg main-nav">
+  <header class="sticky-top shadow-sm">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container">
-        <a class="navbar-brand logo" href="../index.html">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
           <img src="../assets/icons/logo.png" alt="Logo" width="36" height="36">
           <span>Astronomska opservatorija</span>
         </a>
@@ -20,7 +20,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div id="nav" class="collapse navbar-collapse">
-          <ul class="navbar-nav ms-auto nav-links">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="o-nama.html">O nama</a></li>
             <li class="nav-item"><a class="nav-link active" href="dogadjaji.html">Događaji</a></li>
             <li class="nav-item"><a class="nav-link" href="galerija.html">Galerija</a></li>
@@ -31,42 +31,57 @@
     </nav>
   </header>
 
-  <!-- Događaji -->
-  <main class="container events-section">
-    <h1 class="section-title">Događaji</h1>
-    <div class="row">
-      <div class="col-md-6 col-lg-4 event-col">
-        <article class="event-card">
-          <img src="../assets/img/dogadjaj1.jpg" alt="Meteorski roj" class="event-image">
-          <h2 class="event-title">Posmatranje meteorskog roja</h2>
-          <p class="event-text">Pridružite nam se na noćnom posmatranju meteorskog roja Perzeida sa stručnim vodičima.</p>
-          <span class="event-date">12. avgust 2025.</span>
-        </article>
+  <!-- Sadržaj -->
+  <main class="container py-5">
+    <h1 class="mb-4">Događaji</h1>
+    <div class="row g-4">
+      <!-- Događaj 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="../assets/img/dogadjaj1.jpg" class="card-img-top" alt="Posmatranje meteorskog roja">
+          <div class="card-body">
+            <h5 class="card-title">Posmatranje meteorskog roja</h5>
+            <p class="card-text">Pridružite nam se na noćnom posmatranju meteorskog roja Perzeida sa stručnim vodičima.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">12. avgust 2025.</small>
+          </div>
+        </div>
       </div>
-      <div class="col-md-6 col-lg-4 event-col">
-        <article class="event-card">
-          <img src="../assets/img/dogadjaj2.jpg" alt="Predavanje o svemiru" class="event-image">
-          <h2 class="event-title">Predavanje: Tajne svemira</h2>
-          <p class="event-text">Edukativno predavanje za studente i entuzijaste o najnovijim otkrićima u astronomiji.</p>
-          <span class="event-date">20. septembar 2025.</span>
-        </article>
+      <!-- Događaj 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="../assets/img/dogadjaj2.jpg" class="card-img-top" alt="Predavanje o svemiru">
+          <div class="card-body">
+            <h5 class="card-title">Predavanje: Tajne svemira</h5>
+            <p class="card-text">Edukativno predavanje za studente i entuzijaste o najnovijim otkrićima u astronomiji.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">20. septembar 2025.</small>
+          </div>
+        </div>
       </div>
-      <div class="col-md-6 col-lg-4 event-col">
-        <article class="event-card">
-          <img src="../assets/img/dogadjaj3.jpg" alt="Radionica za decu" class="event-image">
-          <h2 class="event-title">Radionica za decu</h2>
-          <p class="event-text">Zabavna radionica gde deca mogu da nauče o planetama i sazvežđima kroz interaktivne igre.</p>
-          <span class="event-date">5. oktobar 2025.</span>
-        </article>
+      <!-- Događaj 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="../assets/img/dogadjaj3.jpg" class="card-img-top" alt="Radionica za decu">
+          <div class="card-body">
+            <h5 class="card-title">Radionica za decu</h5>
+            <p class="card-text">Zabavna radionica gde deca mogu da nauče o planetama i sazvežđima kroz interaktivne igre.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">5. oktobar 2025.</small>
+          </div>
+        </div>
       </div>
     </div>
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-content">
+  <footer class="border-top py-4">
+    <div class="container small d-flex justify-content-between">
       <span>&copy; 2025 Astronomska opservatorija</span>
-      <a href="#" id="contrastToggle">Visoki kontrast</a>
+      <a href="#" id="contrastToggle" class="link-secondary">Visoki kontrast</a>
     </div>
   </footer>
 
