@@ -9,10 +9,10 @@
 </head>
 <body>
   <!-- Navigacija -->
-  <header class="sticky-top shadow-sm">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg main-nav">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
+        <a class="navbar-brand logo" href="../index.html">
           <img src="../assets/icons/logo.png" alt="Logo" width="36" height="36">
           <span>Astronomska opservatorija</span>
         </a>
@@ -20,7 +20,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div id="nav" class="collapse navbar-collapse">
-          <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav ms-auto nav-links">
             <li class="nav-item"><a class="nav-link active" href="o-nama.html">O nama</a></li>
             <li class="nav-item"><a class="nav-link" href="dogadjaji.html">Događaji</a></li>
             <li class="nav-item"><a class="nav-link" href="galerija.html">Galerija</a></li>
@@ -31,32 +31,26 @@
     </nav>
   </header>
 
-  <!-- Sadržaj -->
-<main class="container py-5">
-  <div class="row align-items-center">
-    <div class="col-lg-6 mb-4 mb-lg-0">
-      <h1>O nama</h1>
-      <p>
-        Astronomska opservatorija je centar za posmatranje noćnog neba i edukaciju iz oblasti astronomije.
-        Naš cilj je da približimo astronomiju svim generacijama kroz javna posmatranja, predavanja i radionice.
-      </p>
-      <p>
-        Organizujemo događaje za škole, univerzitete i širu zajednicu. Na raspolaganju su moderni teleskopi
-        i stručni vodiči koji će vas uputiti u tajne svemira.
-      </p>
+  <!-- O nama -->
+  <main class="container about-section">
+    <div class="row align-items-center">
+      <div class="col-lg-6 about-text">
+        <h1 class="section-title">O nama</h1>
+        <p>Astronomska opservatorija je centar za posmatranje noćnog neba i edukaciju iz oblasti astronomije.</p>
+        <p>Naš cilj je da približimo astronomiju svim generacijama kroz javna posmatranja, predavanja i radionice.</p>
+        <p>Organizujemo događaje za škole, univerzitete i širu zajednicu. Na raspolaganju su moderni teleskopi i stručni vodiči.</p>
+      </div>
+      <div class="col-lg-6 about-image">
+        <img src="../assets/img/opservatorija.jpg" alt="Opservatorija" class="img-fluid rounded shadow">
+      </div>
     </div>
-    <div class="col-lg-6">
-      <img src="../assets/img/opservatorija.jpg" alt="Opservatorija" class="img-fluid rounded shadow">
-    </div>
-  </div>
-</main>
-
+  </main>
 
   <!-- Footer -->
-  <footer class="border-top py-4">
-    <div class="container small d-flex justify-content-between">
+  <footer class="site-footer">
+    <div class="container footer-content">
       <span>&copy; 2025 Astronomska opservatorija</span>
-      <a href="#" id="contrastToggle" class="link-secondary">Visoki kontrast</a>
+      <a href="#" id="contrastToggle">Visoki kontrast</a>
     </div>
   </footer>
 

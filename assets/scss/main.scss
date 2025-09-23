@@ -1,31 +1,141 @@
-/* Glavni SCSS */
+/* =====================================
+   Glavni SCSS – Astronomska opservatorija
+   ===================================== */
 
 /* Promenljive */
 $brand: #6c5ce7;
 
 /* Global */
-:root { color-scheme: light dark; }
+:root {
+  color-scheme: light dark;
+}
 
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   background-color: #0b1225;
   color: #fff;
+  line-height: 1.6;
+}
+
+/* Navigacija */
+.site-header {
+  background: #050816;
+  .logo {
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.nav-links .nav-link.active {
+  font-weight: 600;
+  color: $brand !important;
 }
 
 /* Hero sekcija */
-.hero {
+.hero-section {
   background: radial-gradient(ellipse at center, #0b1225 0%, #050816 100%);
   min-height: 60vh;
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  text-align: left;
+
+  .hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
-/* Efekat hover slike */
+/* Slike – animacija hover */
 img {
   transition: transform .3s ease;
 }
 img:hover {
   transform: scale(1.02);
+}
+
+/* Sekcija O nama */
+.about-section {
+  margin-top: 2rem;
+
+  .about-text {
+    font-size: 1rem;
+  }
+
+  .about-image img {
+    border: 4px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* Sekcija Događaji */
+.events-section {
+  margin-top: 2rem;
+
+  .section-title {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+
+  .event-card {
+    background: #0f172a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    height: 100%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+
+    .event-image {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .event-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: .5rem;
+    }
+
+    .event-text {
+      font-size: 0.95rem;
+      margin-bottom: .75rem;
+    }
+
+    .event-date {
+      font-size: 0.9rem;
+      font-style: italic;
+      color: #ccc;
+    }
+  }
+}
+
+/* Kontakt sekcija */
+.contact-section {
+  margin-top: 2rem;
+
+  .section-title {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1rem 0;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+  }
 }
 
 /* Visoki kontrast */
@@ -41,9 +151,4 @@ img:hover {
 /* Veliki font */
 .big-font {
   font-size: 112%;
-}
-
-/* Sekcija O nama */
-main img {
-  border: 4px solid rgba(255, 255, 255, 0.2);
 }
