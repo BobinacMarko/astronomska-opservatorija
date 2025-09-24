@@ -1,7 +1,5 @@
 // Glavni JS
 
-// ===== Pristupačnost =====
-
 // Toggle veliki font
 document.getElementById('fontToggle')?.addEventListener('click', () => {
   document.body.classList.toggle('big-font');
@@ -23,7 +21,7 @@ document.getElementById('contrastToggle')?.addEventListener('click', (e) => {
   if (cookies.highContrast === 'true') document.body.classList.add('high-contrast');
 })();
 
-// ===== Kontakt forma validacija =====
+// Kontakt forma validacija
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contactForm");
   const formMessage = document.getElementById("formMessage");
@@ -71,4 +69,24 @@ document.addEventListener("DOMContentLoaded", function () {
       formMessage.innerHTML = `<p class="text-danger">Molimo ispravite greške u formi.</p>`;
     }
   });
+});
+// Galerija dinamičko učitavanje
+document.addEventListener("DOMContentLoaded", () => {
+  const galleryContainer = document.getElementById("gallery");
+  if (galleryContainer) {
+    fetch("../data/galerija.json")
+      .then(response => response.json())
+      .then(images => {
+        images.forEach(img => {
+          const col = document.createElement("div");
+          col.className = "col-md-4";
+          col.innerHTML = `
+            <img src="../assets/img/${img.src}" alt="${img.alt}" 
+                class="img-fluid rounded shadow gallery-img">
+          `;
+          galleryContainer.appendChild(col);
+        });
+      })
+      .catch(err => console.error("Greška pri učitavanju galerije:", err));
+  }
 });

@@ -10,6 +10,7 @@ body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   background-color: #0b1225;
   color: #fff;
+  line-height: 1.5;
 }
 
 /* Header / Navbar */
@@ -72,6 +73,49 @@ body {
   min-height: 60vh;
   position: relative;
   overflow: hidden;
+  text-align: left;
+}
+.hero h1 {
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+.hero p {
+  color: #ccc;
+}
+
+/* SLIDER / CAROUSEL */
+.carousel {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+.carousel .carousel-item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 450px;
+}
+.carousel .carousel-caption {
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 12px;
+  padding: 15px 20px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+.carousel .carousel-caption h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+.carousel .carousel-caption p {
+  font-size: 1rem;
+  color: #ddd;
+  margin: 0;
+}
+.carousel .carousel-indicators [data-bs-target] {
+  background-color: #4cc9f0;
+}
+.carousel .carousel-control-prev-icon,
+.carousel .carousel-control-next-icon {
+  filter: invert(100%);
 }
 
 /* Efekat hover slike */
@@ -85,13 +129,18 @@ img:hover {
 
 /* Visoki kontrast */
 .high-contrast {
-  background-color: #000 !important;
+  background: #000 !important;
+  color: #fff !important;
+  /* Kontakt stranica */
+}
+.high-contrast h1, .high-contrast h2, .high-contrast h3, .high-contrast h4, .high-contrast h5, .high-contrast h6, .high-contrast p, .high-contrast span, .high-contrast label {
   color: #fff !important;
 }
-.high-contrast a, .high-contrast h1, .high-contrast h2, .high-contrast h3, .high-contrast h4, .high-contrast h5, .high-contrast h6, .high-contrast p, .high-contrast span, .high-contrast label {
-  color: #fff !important;
+.high-contrast a {
+  color: #0ff !important;
+  text-decoration: underline;
 }
-.high-contrast .card, .high-contrast .form-control, .high-contrast footer, .high-contrast header {
+.high-contrast .card, .high-contrast .form-control, .high-contrast footer, .high-contrast header, .high-contrast .navbar {
   background: #000 !important;
   border: 1px solid #fff !important;
 }
@@ -101,17 +150,76 @@ img:hover {
   border: 1px solid #fff !important;
 }
 .high-contrast button:hover, .high-contrast .btn:hover {
-  background: #4cc9f0 !important;
+  background: #0ff !important;
+  color: #000 !important;
+}
+.high-contrast .kontakt-header {
+  background: #000 !important;
+}
+.high-contrast .kontakt-header h1, .high-contrast .kontakt-header p {
+  color: #fff !important;
+}
+.high-contrast .kontakt-info {
+  background: #000 !important;
+  color: #fff !important;
+}
+.high-contrast .kontakt-info h3, .high-contrast .kontakt-info li {
+  color: #fff !important;
+}
+.high-contrast .kontakt-info iframe {
+  border: 1px solid #fff !important;
+}
+.high-contrast .kontakt-forma {
+  background: #000 !important;
+  color: #fff !important;
+}
+.high-contrast .kontakt-forma h2, .high-contrast .kontakt-forma p, .high-contrast .kontakt-forma label {
+  color: #fff !important;
+}
+.high-contrast .kontakt-forma form {
+  background: #000 !important;
+  border: 1px solid #fff !important;
+}
+.high-contrast .kontakt-forma form .form-control {
+  background: #111 !important;
+  border: 1px solid #fff !important;
+  color: #fff !important;
+}
+.high-contrast .kontakt-forma form .form-control::-moz-placeholder {
+  color: #bbb !important;
+}
+.high-contrast .kontakt-forma form .form-control::placeholder {
+  color: #bbb !important;
+}
+.high-contrast .kontakt-forma form .btn {
+  background: #fff !important;
+  color: #000 !important;
+  border: 1px solid #fff !important;
+}
+.high-contrast .kontakt-forma form .btn:hover {
+  background: #0ff !important;
   color: #000 !important;
 }
 
 /* Veliki font */
 .big-font {
-  font-size: 120% !important;
+  font-size: 115% !important;
   line-height: 1.6 !important;
 }
-.big-font h1, .big-font h2, .big-font h3, .big-font h4, .big-font h5, .big-font h6 {
-  font-size: 110% !important;
+.big-font h1 {
+  font-size: 2.6rem !important;
+}
+.big-font h2 {
+  font-size: 2.2rem !important;
+}
+.big-font h3 {
+  font-size: 1.8rem !important;
+}
+.big-font h4, .big-font h5, .big-font h6 {
+  font-size: 1.4rem !important;
+}
+.big-font p, .big-font a, .big-font li, .big-font label, .big-font input, .big-font textarea, .big-font button {
+  font-size: 1.1rem !important;
 }
 
 /* Sekcija O nama */
@@ -197,11 +305,9 @@ main img {
 }
 .kontakt-forma form .form-control::-moz-placeholder {
   color: rgba(255, 255, 255, 0.6);
-  opacity: 1;
 }
 .kontakt-forma form .form-control::placeholder {
   color: rgba(255, 255, 255, 0.6);
-  opacity: 1;
 }
 .kontakt-forma form .form-control:focus {
   border-color: #4cc9f0;
