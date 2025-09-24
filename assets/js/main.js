@@ -186,7 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const col = document.createElement("div");
           col.className = "col-md-6 col-lg-4";
           col.innerHTML = `
-            <div class="card h-100 shadow-sm" data-aos="fade-up" data-aos-delay="${i * 150}">
+            <div class="card h-100 shadow-sm" data-aos="zoom-in-up" data-aos-delay="${i * 150}">
               <img src="../assets/img/${event.slika}" class="card-img-top" alt="${event.naslov}">
               <div class="card-body">
                 <h5 class="card-title">${event.naslov}</h5>
