@@ -1,13 +1,9 @@
-/* ================================
-   Glavni SCSS – Astronomska opservatorija
-   ================================ */
-
 /* Promenljive */
 $brand: #6c5ce7;
 $accent: #4cc9f0;
 $dark-bg: #0b1225;
 
-/* Global */
+/* Globalno */
 :root { color-scheme: light dark; }
 
 body {
@@ -19,9 +15,7 @@ body {
   padding: 0;
 }
 
-/* ================================
-   Header / Navbar
-   ================================ */
+/* Zaglavlje / Navigacija */
 .main-header {
   background: linear-gradient(180deg, rgba(11, 15, 46, 0.95), rgba(26, 31, 71, 0.95));
   backdrop-filter: blur(6px);
@@ -59,9 +53,7 @@ body {
   }
 }
 
-/* ================================
-   Dugmad za pristupačnost
-   ================================ */
+/* Dugmad za pristupačnost */
 .accessibility-tools {
   button {
     font-size: 0.85rem;
@@ -80,9 +72,7 @@ body {
   }
 }
 
-/* ================================
-   Hero sekcija
-   ================================ */
+/* Hero sekcija */
 .hero {
   background: radial-gradient(ellipse at center, $dark-bg 0%, #050816 100%);
   min-height: 60vh;
@@ -98,9 +88,7 @@ body {
   p { color: #ccc; }
 }
 
-/* ================================
-   Slider / Carousel
-   ================================ */
+/* Karusel */
 .carousel {
   border-radius: 16px;
   overflow: hidden;
@@ -138,9 +126,7 @@ body {
   }
 }
 
-/* ================================
-   Efekti za slike (hover)
-   ================================ */
+/* Efekti na slikama */
 .gallery-img {
   transition: transform .3s ease, box-shadow .3s ease;
   cursor: pointer;
@@ -156,7 +142,7 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4) !important;
 }
 
-/* Globalni hover efekat za sve slike osim onih sa klasom no-hover */
+/* Globalni hover na slikama */
 img:not(.no-hover) {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -166,9 +152,7 @@ img:not(.no-hover):hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* ================================
-   Visoki kontrast (Accessibility)
-   ================================ */
+/* Visoki kontrast */
 .high-contrast {
   background: #000 !important;
   color: #fff !important;
@@ -244,9 +228,7 @@ img:not(.no-hover):hover {
   }
 }
 
-/* ================================
-   Veliki font (Accessibility)
-   ================================ */
+/* Veliki font */
 .big-font {
   font-size: 115% !important;
   line-height: 1.6 !important;
@@ -261,16 +243,12 @@ img:not(.no-hover):hover {
   }
 }
 
-/* ================================
-   Sekcija O nama
-   ================================ */
+/* O nama */
 main img {
   border: 4px solid rgba(255, 255, 255, 0.2);
 }
 
-/* ================================
-   Kontakt stranica
-   ================================ */
+/* Kontakt stranica */
 .kontakt-header {
   background: linear-gradient(180deg, #0b0f2e, #1a1f47);
   padding: 60px 0 20px;
@@ -389,65 +367,56 @@ main img {
   }
 }
 
-/* ================================
-   Footer
-   ================================ */
+/* Footer */
 .main-footer {
-  background: linear-gradient(180deg, #0b0f2e, #050816);
+  background: linear-gradient(180deg, rgba(11, 15, 46, 0.95), rgba(5, 8, 22, 0.98));
+  backdrop-filter: blur(6px);
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.4);
+
   color: #ccc;
-  font-size: 0.9rem;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding: 50px 0 30px;
+  font-size: 1rem;
+  padding: 70px 0 25px;
 
   h5, h6 {
     color: #fff;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
+    font-size: 1.2rem;
   }
 
-  p, li { margin-bottom: 6px; }
-
-  ul {
-    padding: 0;
-    list-style: none;
+  p, li {
+    margin-bottom: 8px;
+    font-size: 1rem;
   }
 
   a {
-    color: $accent;
+    font-size: 1rem;
+    color: #ccc;
     text-decoration: none;
     transition: color 0.3s ease;
 
     &:hover {
-      color: #4895ef;
-      text-decoration: underline;
+      color: $accent;
     }
   }
 
   .social-links a {
-    font-size: 1.3rem;
-    margin-right: 12px;
-    color: $accent;
-
-    &:hover { color: #4895ef; }
+    font-size: 1.5rem;
+    margin-right: 14px;
+    width: 40px;
+    height: 40px;
   }
 
   .footer-bottom {
-    margin-top: 30px;
-    padding-top: 15px;
-    border-top: 1px solid rgba(255,255,255,0.1);
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     color: #aaa;
-
-    a {
-      margin-left: 15px;
-      font-size: 0.8rem;
-    }
+    padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,0.1);
   }
 }
-/* ================================
-   Back to Top dugme
-   ================================ */
+
+/* Dugme za povratak na vrh */
 #backToTop {
   position: fixed;
   bottom: 25px;
@@ -467,9 +436,8 @@ main img {
     transform: translateY(-4px);
   }
 }
-/* ================================
-   Loader / Spinner
-   ================================ */
+
+/* Loader / Spiner */
 #galleryLoader,
 #eventsLoader {
   text-align: center;

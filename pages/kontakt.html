@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kontakt – Astronomska opservatorija</title>
+  <title>Astronomska opservatorija</title>
   <meta name="description" content="Kontaktirajte astronomsku opservatoriju u Zrenjaninu, pošaljite poruku putem forme ili nas posetite lično.">
   <meta name="keywords" content="astronomija, opservatorija, kontakt, Zrenjanin, informacije, adresa, telefon">
   <meta name="author" content="Marko Bobinac SI 29/21">
@@ -126,41 +126,60 @@
   </main>
 
   <!-- Footer -->
-  <footer class="main-footer py-5" data-aos="fade-up" data-aos-delay="200">
-    <div class="container">
-      <div class="row">
-        <!-- Info kolona -->
-        <div class="col-md-4 mb-3">
-          <h5>Astronomska opservatorija</h5>
-          <p class="small mb-1">© 2025 Astronomska opservatorija</p>
-          <p class="small mb-1">Zrenjanin, Srbija</p>
-          <p class="small mb-1">✉ kontakt@opservatorija.rs</p>
-          <p class="small">☎ +381 23 123 456</p>
-        </div>
+  <footer class="main-footer text-light pt-5">
+  <div class="container">
+    <div class="row gy-4">
+      <!-- Logo i opis -->
+      <div class="col-md-4">
+        <h5 class="fw-bold">Astronomska opservatorija</h5>
+        <p class="small">
+          Centar za posmatranje noćnog neba i edukaciju u oblasti astronomije. 
+          Naš cilj je da približimo svemir svima kroz javna posmatranja, predavanja i radionice.
+        </p>
+      </div>
 
-        <!-- Linkovi -->
-        <div class="col-md-4 mb-3">
-          <h6>Brzi linkovi</h6>
-          <ul class="list-unstyled small">
-            <li><a href="o-nama.html">O nama</a></li>
-            <li><a href="dogadjaji.html">Događaji</a></li>
-            <li><a href="galerija.html">Galerija</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-          </ul>
-        </div>
+      <!-- Linkovi -->
+      <div class="col-md-2">
+        <h6 class="fw-bold">Navigacija</h6>
+        <ul class="list-unstyled small">
+          <li><a href="pages/o-nama.html" class="text-decoration-none text-light">O nama</a></li>
+          <li><a href="pages/dogadjaji.html" class="text-decoration-none text-light">Događaji</a></li>
+          <li><a href="pages/galerija.html" class="text-decoration-none text-light">Galerija</a></li>
+          <li><a href="pages/kontakt.html" class="text-decoration-none text-light">Kontakt</a></li>
+        </ul>
+      </div>
 
-        <!-- Mreže -->
-        <div class="col-md-4 mb-3">
-          <h6>Pratite nas</h6>
-          <div class="social-links">
-            <a href="#"><i class="bi bi-facebook" aria-label="Facebook"></i></a>
-            <a href="#"><i class="bi bi-instagram" aria-label="Instagram"></i></a>
-            <a href="#"><i class="bi bi-youtube" aria-label="YouTube"></i></a>
-          </div>
+      <!-- Kontakt -->
+      <div class="col-md-3">
+        <h6 class="fw-bold">Kontakt</h6>
+        <ul class="list-unstyled small">
+          <li>Zrenjanin, Srbija</li>
+          <li>✉ kontakt@opservatorija.rs</li>
+          <li>☎ +381 23 123 456</li>
+          <li>Radno vreme: 18:00 – 23:00</li>
+        </ul>
+      </div>
+
+      <!-- Društvene mreže -->
+      <div class="col-md-3">
+        <h6 class="fw-bold">Pratite nas</h6>
+        <div class="d-flex gap-3 mt-2">
+          <a href="#" class="text-light fs-4"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-light fs-4"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-light fs-4"><i class="bi bi-youtube"></i></a>
         </div>
       </div>
     </div>
-  </footer>
+
+    <hr class="border-secondary my-4">
+
+    <!-- Donja traka -->
+    <div class="d-flex justify-content-between align-items-center pb-3 small">
+      <span>© 2025 Astronomska opservatorija. Sva prava zadržana.</span>
+      <span>Izradio: Marko Bobinac SI 29/21</span>
+    </div>
+  </div>
+</footer>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -171,7 +190,7 @@
   <script>
     AOS.init();
   </script>
-  <!-- Back to Top -->
+  <!-- Back to top -->
   <button id="backToTop" class="btn btn-primary">
     <i class="bi bi-arrow-up"></i>
   </button>

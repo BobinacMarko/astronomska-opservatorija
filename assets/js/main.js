@@ -1,23 +1,17 @@
-// ================================
-// Toggle veliki font
-// ================================
+// Preklop velikog fonta
 document.getElementById('fontToggle')?.addEventListener('click', () => {
   document.body.classList.toggle('big-font');
   document.cookie = `bigFont=${document.body.classList.contains('big-font')}; path=/; max-age=31536000`;
 });
 
-// ================================
-// Toggle visoki kontrast
-// ================================
+// Preklop visokog kontrasta
 document.getElementById('contrastToggle')?.addEventListener('click', (e) => {
   e.preventDefault();
   document.body.classList.toggle('high-contrast');
   document.cookie = `highContrast=${document.body.classList.contains('high-contrast')}; path=/; max-age=31536000`;
 });
 
-// ================================
-// Restore preferences iz cookies
-// ================================
+// Vraćanje podešavanja iz kolačića
 (function restorePrefs() {
   if (!document.cookie) return;
   const cookies = Object.fromEntries(document.cookie.split('; ').map(c => c.split('=')));
@@ -25,14 +19,12 @@ document.getElementById('contrastToggle')?.addEventListener('click', (e) => {
   if (cookies.highContrast === 'true') document.body.classList.add('high-contrast');
 })();
 
-// ================================
-// Kontakt forma validacija
-// ================================
+// Validacija kontakt forme
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contactForm");
   const formMessage = document.getElementById("formMessage");
 
-  if (!form) return; // ako forma ne postoji na stranici
+  if (!form) return;
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -77,9 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// ================================
-// Galerija dinamičko učitavanje + Lightbox sa paginacijom
-// ================================
+// Galerija sa lightbox-om i paginacijom
 document.addEventListener("DOMContentLoaded", () => {
   const galleryContainer = document.getElementById("gallery");
   const galleryLoader = document.getElementById("galleryLoader");
@@ -169,15 +159,13 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// ================================
 // Dinamičko učitavanje događaja
-// ================================
 document.addEventListener("DOMContentLoaded", () => {
   const eventsContainer = document.getElementById("events");
   const eventsLoader = document.getElementById("eventsLoader");
 
   if (eventsContainer) {
-    if (eventsLoader) eventsLoader.style.display = "block"; // prikaži spinner
+    if (eventsLoader) eventsLoader.style.display = "block";
 
     fetch("../data/dogadjaji.json")
       .then(response => response.json())
@@ -202,19 +190,16 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .catch(err => console.error("Greška pri učitavanju događaja:", err))
       .finally(() => {
-        if (eventsLoader) eventsLoader.style.display = "none"; // sakrij spinner
+        if (eventsLoader) eventsLoader.style.display = "none";
       });
   }
 });
 
-// ================================
-// Back to Top dugme
-// ================================
+// Dugme za povratak na vrh
 document.addEventListener("DOMContentLoaded", () => {
   const backToTop = document.getElementById("backToTop");
 
   if (backToTop) {
-    // Prikaz/skrivanje dugmeta
     window.addEventListener("scroll", () => {
       if (window.scrollY > 200) {
         backToTop.style.display = "block";
@@ -223,7 +208,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Scroll na vrh
     backToTop.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
