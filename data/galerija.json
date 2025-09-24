@@ -1,5 +1,12 @@
 [
-  { "src": "galaksija1.jpg", "alt": "Galaksija" },
-  { "src": "nebula2.jpg", "alt": "Maglina" },
-  { "src": "teleskop3.jpg", "alt": "Teleskop" }
+  { "src": "galaksija1.jpg", "alt": "Galaksija", "caption": "Spiralna galaksija posmatrana teleskopom" },
+  { "src": "nebula2.jpg", "alt": "Maglina", "caption": "Maglina u sazvežđu Oriona" },
+  { "src": "teleskop3.jpg", "alt": "Teleskop", "caption": "Teleskop u dvorištu opservatorije" },
+  { "src": "observatory-telescope.jpg", "alt": "Teleskop u opservatoriji", "caption": "Veliki teleskop u opservatoriji" },
+  { "src": "astronomy-telescope-night.jpg", "alt": "Teleskop noću", "caption": "Astronomi posmatraju noćno nebo" },
+  { "src": "milky-way.jpg", "alt": "Mlečni put", "caption": "Mlečni put iznad horizonta" },
+  { "src": "nebula-space.jpg", "alt": "Maglina", "caption": "Šarena maglina u dubokom svemiru" },
+  { "src": "moon-phases.jpg", "alt": "Faze Meseca", "caption": "Različite faze Meseca" },
+  { "src": "saturn-planet.jpg", "alt": "Saturn", "caption": "Planeta Saturn sa svojim prstenovima" },
+  { "src": "mars-planet.jpg", "alt": "Mars", "caption": "Crvena planeta Mars u detaljnom prikazu" }
 ]

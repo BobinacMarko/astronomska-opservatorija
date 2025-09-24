@@ -1,5 +1,7 @@
 @charset "UTF-8";
-/* Glavni SCSS */
+/* ================================
+   Glavni SCSS – Astronomska opservatorija
+   ================================ */
 /* Promenljive */
 /* Global */
 :root {
@@ -11,9 +13,13 @@ body {
   background-color: #0b1225;
   color: #fff;
   line-height: 1.5;
+  margin: 0;
+  padding: 0;
 }
 
-/* Header / Navbar */
+/* ================================
+   Header / Navbar
+   ================================ */
 .main-header {
   background: linear-gradient(180deg, rgba(11, 15, 46, 0.95), rgba(26, 31, 71, 0.95));
   -webkit-backdrop-filter: blur(6px);
@@ -51,7 +57,9 @@ body {
   box-shadow: none;
 }
 
-/* Dugmad za pristupačnost */
+/* ================================
+   Dugmad za pristupačnost
+   ================================ */
 .accessibility-tools button {
   font-size: 0.85rem;
   padding: 4px 10px;
@@ -67,7 +75,9 @@ body {
   border-color: #4cc9f0;
 }
 
-/* Hero sekcija */
+/* ================================
+   Hero sekcija
+   ================================ */
 .hero {
   background: radial-gradient(ellipse at center, #0b1225 0%, #050816 100%);
   min-height: 60vh;
@@ -83,7 +93,9 @@ body {
   color: #ccc;
 }
 
-/* SLIDER / CAROUSEL */
+/* ================================
+   Slider / Carousel
+   ================================ */
 .carousel {
   border-radius: 16px;
   overflow: hidden;
@@ -118,16 +130,36 @@ body {
   filter: invert(100%);
 }
 
-/* Efekat hover slike */
-img {
-  transition: transform 0.3s ease;
+/* ================================
+   Efekti za slike (hover)
+   ================================ */
+.gallery-img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.gallery-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.6);
 }
 
-img:hover {
-  transform: scale(1.02);
+.gallery-img:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4) !important;
 }
 
-/* Visoki kontrast */
+/* Globalni hover efekat za sve slike osim onih sa klasom no-hover */
+img:not(.no-hover) {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:not(.no-hover):hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ================================
+   Visoki kontrast (Accessibility)
+   ================================ */
 .high-contrast {
   background: #000 !important;
   color: #fff !important;
@@ -137,7 +169,7 @@ img:hover {
   color: #fff !important;
 }
 .high-contrast a {
-  color: #0ff !important;
+  color: cyan !important;
   text-decoration: underline;
 }
 .high-contrast .card, .high-contrast .form-control, .high-contrast footer, .high-contrast header, .high-contrast .navbar {
@@ -150,7 +182,7 @@ img:hover {
   border: 1px solid #fff !important;
 }
 .high-contrast button:hover, .high-contrast .btn:hover {
-  background: #0ff !important;
+  background: cyan !important;
   color: #000 !important;
 }
 .high-contrast .kontakt-header {
@@ -194,14 +226,15 @@ img:hover {
 .high-contrast .kontakt-forma form .btn {
   background: #fff !important;
   color: #000 !important;
-  border: 1px solid #fff !important;
 }
 .high-contrast .kontakt-forma form .btn:hover {
-  background: #0ff !important;
+  background: cyan !important;
   color: #000 !important;
 }
 
-/* Veliki font */
+/* ================================
+   Veliki font (Accessibility)
+   ================================ */
 .big-font {
   font-size: 115% !important;
   line-height: 1.6 !important;
@@ -222,12 +255,16 @@ img:hover {
   font-size: 1.1rem !important;
 }
 
-/* Sekcija O nama */
+/* ================================
+   Sekcija O nama
+   ================================ */
 main img {
   border: 4px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Kontakt – uvod */
+/* ================================
+   Kontakt stranica
+   ================================ */
 .kontakt-header {
   background: linear-gradient(180deg, #0b0f2e, #1a1f47);
   padding: 60px 0 20px;
@@ -243,7 +280,6 @@ main img {
   color: #ccc;
 }
 
-/* Kontakt – info sekcija */
 .kontakt-info {
   background: #f8f9fa;
   color: #000;
@@ -262,7 +298,6 @@ main img {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Kontakt – forma */
 .kontakt-forma {
   padding: 80px 0;
   background: linear-gradient(180deg, #0b0f2e 0%, #1a1f47 100%);
@@ -343,7 +378,9 @@ main img {
   color: #ff6b6b;
 }
 
-/* Footer */
+/* ================================
+   Footer
+   ================================ */
 .main-footer {
   background: linear-gradient(180deg, #0b0f2e, #050816);
   color: #ccc;
@@ -391,4 +428,40 @@ main img {
 .main-footer .footer-bottom a {
   margin-left: 15px;
   font-size: 0.8rem;
+}
+
+/* ================================
+   Back to Top dugme
+   ================================ */
+#backToTop {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: none;
+  z-index: 999;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  font-size: 1.3rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+#backToTop:hover {
+  background-color: rgb(28.9432989691, 186.8041237113, 236.0567010309);
+  transform: translateY(-4px);
+}
+
+/* ================================
+   Loader / Spinner
+   ================================ */
+#galleryLoader,
+#eventsLoader {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
 }/*# sourceMappingURL=main.css.map */

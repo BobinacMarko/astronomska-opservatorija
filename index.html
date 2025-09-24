@@ -17,6 +17,9 @@
 
   <!-- Glavni CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- AOS CSS za animacije -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"> 
 </head>
 <body>
   <!-- Navigacija -->
@@ -25,7 +28,7 @@
       <div class="container">
         <!-- Logo -->
         <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-          <img src="assets/icons/logo.png" alt="Logo" width="40" height="40" 
+          <img src="assets/icons/logo.png" alt="Logo" width="40" height="40" class="no-hover"
                onerror="this.src='https://via.placeholder.com/40x40?text=★'">
           <span>Astronomska opservatorija</span>
         </a>
@@ -57,59 +60,59 @@
   <!-- Hero -->
   <main>
     <section class="hero text-white d-flex align-items-center">
-      <div class="container py-5">
-        <h1 class="display-5 fw-bold">Posmatrajmo zvezde zajedno</h1>
-        <p class="lead">Prijavi se za posetu opservatoriji, učestvuj u radionicama i istraži noćno nebo.</p>
-        <a href="pages/dogadjaji.html" class="btn btn-primary btn-lg">Najave događaja</a>
+      <div class="container py-5 text-center">
+        <h1 class="display-5 fw-bold" data-aos="fade-down">Posmatrajmo zvezde zajedno</h1>
+        <p class="lead" data-aos="fade-up" data-aos-delay="200">Prijavi se za posetu opservatoriji, učestvuj u radionicama i istraži noćno nebo.</p>
+        <a href="pages/dogadjaji.html" class="btn btn-primary btn-lg" data-aos="zoom-in" data-aos-delay="400">Najave događaja</a>
       </div>
     </section>
 
     <!-- Slajder -->
-<section class="container my-5">
-  <div id="astroSlider" class="carousel slide shadow-lg rounded-4 overflow-hidden" data-bs-ride="carousel">
-    
-    <!-- indikator tačkice -->
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#astroSlider" data-bs-slide-to="0" class="active"></button>
-      <button type="button" data-bs-target="#astroSlider" data-bs-slide-to="1"></button>
-      <button type="button" data-bs-target="#astroSlider" data-bs-slide-to="2"></button>
-    </div>
-
-    <!-- slajdovi -->
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100" src="assets/img/galaksija1.jpg" alt="Galaksija">
-        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
-          <h5>Galaksija u daljini</h5>
-          <p>Pogledajmo čuda kosmosa kroz naš teleskop.</p>
+    <section class="container my-5">
+      <div id="astroSlider" class="carousel slide shadow-lg rounded-4 overflow-hidden" data-bs-ride="carousel">
+        
+        <!-- indikator tačkice -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#astroSlider" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#astroSlider" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#astroSlider" data-bs-slide-to="2"></button>
         </div>
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="assets/img/nebula2.jpg" alt="Maglina">
-        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
-          <h5>Misteriozne magline</h5>
-          <p>Pridruži se radionicama i nauči više o svemiru.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="assets/img/teleskop3.jpg" alt="Teleskop">
-        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
-          <h5>Noć posmatranja</h5>
-          <p>Istraži nebo uživo u našoj opservatoriji.</p>
-        </div>
-      </div>
-    </div>
 
-    <!-- kontrole -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#astroSlider" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#astroSlider" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
-  </div>
-</section>
+        <!-- slajdovi -->
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-aos="fade-up">
+            <img class="d-block w-100" src="assets/img/galaksija1.jpg" alt="Galaksija">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+              <h5>Galaksija u daljini</h5>
+              <p>Pogledajmo čuda kosmosa kroz naš teleskop.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-aos="fade-up" data-aos-delay="200">
+            <img class="d-block w-100" src="assets/img/nebula2.jpg" alt="Maglina">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+              <h5>Misteriozne magline</h5>
+              <p>Pridruži se radionicama i nauči više o svemiru.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-aos="fade-up" data-aos-delay="400">
+            <img class="d-block w-100" src="assets/img/teleskop3.jpg" alt="Teleskop">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+              <h5>Noć posmatranja</h5>
+              <p>Istraži nebo uživo u našoj opservatoriji.</p>
+            </div>
+          </div>
+        </div>
 
+        <!-- kontrole -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#astroSlider" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#astroSlider" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer class="main-footer py-5">
@@ -139,9 +142,9 @@
         <div class="col-md-4 mb-3">
           <h6>Pratite nas</h6>
           <div class="social-links">
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-youtube"></i></a>
+            <a href="#"><i class="bi bi-facebook" aria-label="Facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram" aria-label="Instagram"></i></a>
+            <a href="#"><i class="bi bi-youtube" aria-label="YouTube"></i></a>
           </div>
         </div>
       </div>
@@ -152,5 +155,14 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Glavni JS -->
   <script src="assets/js/main.js"></script>
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <!-- Back to Top -->
+<button id="backToTop" class="btn btn-primary">
+  <i class="bi bi-arrow-up"></i>
+</button>
 </body>
 </html>

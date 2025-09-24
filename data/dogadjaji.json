@@ -1,0 +1,20 @@
+[
+  {
+    "naslov": "Posmatranje meteorskog roja",
+    "datum": "12.8.2025",
+    "opis": "Pridružite nam se na noćnom posmatranju meteorskog roja Perzeida sa stručnim vodičima.",
+    "slika": "dogadjaj1.jpg"
+  },
+  {
+    "naslov": "Predavanje: Tajne svemira",
+    "datum": "20.9.2025",
+    "opis": "Edukativno predavanje za studente i entuzijaste o najnovijim otkrićima u astronomiji.",
+    "slika": "dogadjaj2.jpg"
+  },
+  {
+    "naslov": "Radionica za decu",
+    "datum": "5.10.2025",
+    "opis": "Zabavna radionica gde deca mogu da nauče o planetama i sazvežđima kroz interaktivne igre.",
+    "slika": "dogadjaj3.jpg"
+  }
+]

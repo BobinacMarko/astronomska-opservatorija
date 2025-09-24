@@ -16,6 +16,9 @@
 
   <!-- Glavni CSS -->
   <link href="../assets/css/main.css" rel="stylesheet">
+  
+  <!-- AOS CSS za animacije na skrolovanje -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"> 
 </head>
 <body>
   <!-- Navigacija -->
@@ -23,7 +26,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
-          <img src="../assets/icons/logo.png" alt="Logo" width="40" height="40" 
+          <img src="../assets/icons/logo.png" alt="Logo Astronomske opservatorije" width="40" height="40" class="no-hover"
                onerror="this.src='https://via.placeholder.com/40x40?text=★'">
           <span>Astronomska opservatorija</span>
         </a>
@@ -49,11 +52,27 @@
 
   <!-- Sadržaj -->
   <main class="container py-5">
-    <h1>Galerija</h1>
-    <p class="mb-4">Ovde će biti prikazane slike opservatorije i astronomskih fenomena.</p>
+    <h1 data-aos="fade-down">Galerija</h1>
+    <p class="mb-4" data-aos="fade-up" data-aos-delay="150">
+      Ovde su prikazane slike opservatorije i astronomskih fenomena.
+    </p>
 
     <!-- Dinamička galerija -->
     <div id="gallery" class="row g-4"></div>
+
+    <!-- Loader za galeriju -->
+    <div id="galleryLoader" class="text-center my-5" style="display:none;">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Učitavanje...</span>
+      </div>
+    </div>
+
+    <!-- Dugme Učitaj još -->
+    <div class="text-center my-4">
+      <button id="loadMore" class="btn btn-outline-primary" style="display:none;">
+        Učitaj još
+      </button>
+    </div>
   </main>
 
   <!-- Modal za lightbox -->
@@ -61,10 +80,12 @@
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content bg-dark">
         <div class="modal-body text-center">
-          <img id="lightboxImg" src="" alt="" class="img-fluid rounded">
+          <img id="lightboxImg" src="" alt="" class="img-fluid rounded no-hover">
           <p id="lightboxCaption" class="text-light mt-2"></p>
         </div>
-        <div class="modal-footer border-0">
+        <div class="modal-footer border-0 justify-content-between">
+          <button type="button" class="btn btn-outline-light" id="prevImage">⟨</button>
+          <button type="button" class="btn btn-outline-light" id="nextImage">⟩</button>
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
         </div>
       </div>
@@ -99,9 +120,9 @@
         <div class="col-md-4 mb-3">
           <h6>Pratite nas</h6>
           <div class="social-links">
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-youtube"></i></a>
+            <a href="#"><i class="bi bi-facebook" aria-label="Facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram" aria-label="Instagram"></i></a>
+            <a href="#"><i class="bi bi-youtube" aria-label="YouTube"></i></a>
           </div>
         </div>
       </div>
@@ -112,5 +133,15 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Glavni JS -->
   <script src="../assets/js/main.js"></script>
+  <!-- AOS JS za animacije na skrolovanje -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- Back to Top -->
+  <button id="backToTop" class="btn btn-primary">
+    <i class="bi bi-arrow-up"></i>
+  </button>
 </body>
 </html>

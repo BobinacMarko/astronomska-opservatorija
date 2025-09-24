@@ -139,7 +139,7 @@ body {
 }
 
 /* ================================
-   Efekti za slike
+   Efekti za slike (hover)
    ================================ */
 .gallery-img {
   transition: transform .3s ease, box-shadow .3s ease;
@@ -149,6 +149,21 @@ body {
     transform: scale(1.03);
     box-shadow: 0 8px 18px rgba(0,0,0,0.6);
   }
+}
+
+.gallery-img:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Globalni hover efekat za sve slike osim onih sa klasom no-hover */
+img:not(.no-hover) {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:not(.no-hover):hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* ================================
@@ -429,4 +444,39 @@ main img {
       font-size: 0.8rem;
     }
   }
+}
+/* ================================
+   Back to Top dugme
+   ================================ */
+#backToTop {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: none;
+  z-index: 999;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  font-size: 1.3rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: darken($accent, 10%);
+    transform: translateY(-4px);
+  }
+}
+/* ================================
+   Loader / Spinner
+   ================================ */
+#galleryLoader,
+#eventsLoader {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
 }
