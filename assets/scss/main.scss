@@ -16,7 +16,7 @@ body {
 }
 
 /* Zaglavlje / Navigacija */
-.main-header {
+.glavno-zaglavlje {
   background: linear-gradient(180deg, rgba(11, 15, 46, 0.95), rgba(26, 31, 71, 0.95));
   backdrop-filter: blur(6px);
   box-shadow: 0 2px 10px rgba(0,0,0,0.4);
@@ -54,7 +54,7 @@ body {
 }
 
 /* Dugmad za pristupačnost */
-.accessibility-tools {
+.alatke-pristupacnosti {
   button {
     font-size: 0.85rem;
     padding: 4px 10px;
@@ -72,8 +72,8 @@ body {
   }
 }
 
-/* Hero sekcija */
-.hero {
+/* Uvodna sekcija */
+.uvodna-sekcija {
   background: radial-gradient(ellipse at center, $dark-bg 0%, #050816 100%);
   min-height: 60vh;
   position: relative;
@@ -127,7 +127,7 @@ body {
 }
 
 /* Efekti na slikama */
-.gallery-img {
+.slika-galerije {
   transition: transform .3s ease, box-shadow .3s ease;
   cursor: pointer;
 
@@ -137,23 +137,23 @@ body {
   }
 }
 
-.gallery-img:hover {
+.slika-galerije:hover {
   transform: scale(1.05) !important;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4) !important;
 }
 
 /* Globalni hover na slikama */
-img:not(.no-hover) {
+img:not(.bez-hovera) {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-img:not(.no-hover):hover {
+img:not(.bez-hovera):hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* Visoki kontrast */
-.high-contrast {
+.visok-kontrast {
   background: #000 !important;
   color: #fff !important;
 
@@ -183,7 +183,7 @@ img:not(.no-hover):hover {
   }
 
   /* Kontakt stranica */
-  .kontakt-header {
+  .kontakt-zaglavlje {
     background: #000 !important;
     h1, p { color: #fff !important; }
   }
@@ -229,7 +229,7 @@ img:not(.no-hover):hover {
 }
 
 /* Veliki font */
-.big-font {
+.veliki-font {
   font-size: 115% !important;
   line-height: 1.6 !important;
 
@@ -249,7 +249,7 @@ main img {
 }
 
 /* Kontakt stranica */
-.kontakt-header {
+.kontakt-zaglavlje {
   background: linear-gradient(180deg, #0b0f2e, #1a1f47);
   padding: 60px 0 20px;
   text-align: center;
@@ -357,7 +357,7 @@ main img {
     }
   }
 
-  #formMessage {
+  #porukaForme {
     text-align: center;
     margin-top: 20px;
     font-weight: 600;
@@ -367,8 +367,8 @@ main img {
   }
 }
 
-/* Footer */
-.main-footer {
+/* Futer */
+.glavni-futer {
   background: linear-gradient(180deg, rgba(11, 15, 46, 0.95), rgba(5, 8, 22, 0.98));
   backdrop-filter: blur(6px);
   box-shadow: 0 -2px 10px rgba(0,0,0,0.4);
@@ -417,7 +417,7 @@ main img {
 }
 
 /* Dugme za povratak na vrh */
-#backToTop {
+#nazadNaVrh {
   position: fixed;
   bottom: 25px;
   right: 25px;
@@ -437,9 +437,9 @@ main img {
   }
 }
 
-/* Loader / Spiner */
-#galleryLoader,
-#eventsLoader {
+/* Učitavači */
+#ucitavacGalerije,
+#ucitavacDogadjaja {
   text-align: center;
   margin: 30px 0;
 }
@@ -447,4 +447,32 @@ main img {
 .spinner-border {
   width: 3rem;
   height: 3rem;
+}
+
+/* 
+   Raspored po rezolucijama (medija upiti)
+/* XS: telefoni do 576px */
+@media (max-width: 575.98px) {
+  .uvodna-sekcija h1 { font-size: 2rem; }
+  .uvodna-sekcija p.lead { font-size: 1rem; }
+  .glavno-zaglavlje .navbar-brand span { font-size: 1rem; }
+  .glavni-futer { text-align: center; }
+}
+
+/* SM: ≥576px i <768px */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .uvodna-sekcija h1 { font-size: 2.4rem; }
+  .slika-galerije { transform: none; }
+}
+
+/* MD: ≥768px i <992px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .uvodna-sekcija h1 { font-size: 2.8rem; }
+  .alatke-pristupacnosti { justify-content: flex-end; }
+}
+
+/* LG+: ≥992px */
+@media (min-width: 992px) {
+  .uvodna-sekcija h1 { font-size: 3.2rem; }
+  .glavno-zaglavlje { backdrop-filter: blur(8px); }
 }

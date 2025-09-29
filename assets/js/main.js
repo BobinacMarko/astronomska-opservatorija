@@ -1,28 +1,28 @@
 // Preklop velikog fonta
-document.getElementById('fontToggle')?.addEventListener('click', () => {
-  document.body.classList.toggle('big-font');
-  document.cookie = `bigFont=${document.body.classList.contains('big-font')}; path=/; max-age=31536000`;
+document.getElementById('preklopFonta')?.addEventListener('click', () => {
+  document.body.classList.toggle('veliki-font');
+  document.cookie = `velikiFont=${document.body.classList.contains('veliki-font')}; path=/; max-age=31536000`;
 });
 
 // Preklop visokog kontrasta
-document.getElementById('contrastToggle')?.addEventListener('click', (e) => {
+document.getElementById('preklopKontrasta')?.addEventListener('click', (e) => {
   e.preventDefault();
-  document.body.classList.toggle('high-contrast');
-  document.cookie = `highContrast=${document.body.classList.contains('high-contrast')}; path=/; max-age=31536000`;
+  document.body.classList.toggle('visok-kontrast');
+  document.cookie = `visokKontrast=${document.body.classList.contains('visok-kontrast')}; path=/; max-age=31536000`;
 });
 
 // Vraćanje podešavanja iz kolačića
 (function restorePrefs() {
   if (!document.cookie) return;
   const cookies = Object.fromEntries(document.cookie.split('; ').map(c => c.split('=')));
-  if (cookies.bigFont === 'true') document.body.classList.add('big-font');
-  if (cookies.highContrast === 'true') document.body.classList.add('high-contrast');
+  if (cookies.velikiFont === 'true') document.body.classList.add('veliki-font');
+  if (cookies.visokKontrast === 'true') document.body.classList.add('visok-kontrast');
 })();
 
 // Validacija kontakt forme
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("contactForm");
-  const formMessage = document.getElementById("formMessage");
+  const form = document.getElementById("kontaktForma");
+  const formMessage = document.getElementById("porukaForme");
 
   if (!form) return;
 
@@ -32,31 +32,31 @@ document.addEventListener("DOMContentLoaded", function () {
     let valid = true;
 
     // Ime
-    const name = document.getElementById("name");
-    if (!name.value.trim()) {
-      name.classList.add("is-invalid");
+    const ime = document.getElementById("ime");
+    if (!ime.value.trim()) {
+      ime.classList.add("is-invalid");
       valid = false;
     } else {
-      name.classList.remove("is-invalid");
+      ime.classList.remove("is-invalid");
     }
 
     // Email
-    const email = document.getElementById("email");
+    const eposta = document.getElementById("eposta");
     const emailRegex = /^[^@]+@[^@]+\.[^@]+$/;
-    if (!emailRegex.test(email.value.trim())) {
-      email.classList.add("is-invalid");
+    if (!emailRegex.test(eposta.value.trim())) {
+      eposta.classList.add("is-invalid");
       valid = false;
     } else {
-      email.classList.remove("is-invalid");
+      eposta.classList.remove("is-invalid");
     }
 
     // Poruka
-    const message = document.getElementById("message");
-    if (!message.value.trim()) {
-      message.classList.add("is-invalid");
+    const poruka = document.getElementById("poruka");
+    if (!poruka.value.trim()) {
+      poruka.classList.add("is-invalid");
       valid = false;
     } else {
-      message.classList.remove("is-invalid");
+      poruka.classList.remove("is-invalid");
     }
 
     // Rezultat
@@ -71,16 +71,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Galerija sa lightbox-om i paginacijom
 document.addEventListener("DOMContentLoaded", () => {
-  const galleryContainer = document.getElementById("gallery");
-  const galleryLoader = document.getElementById("galleryLoader");
-  const loadMoreBtn = document.getElementById("loadMore");
-  const lightboxModal = document.getElementById("lightboxModal")
-    ? new bootstrap.Modal(document.getElementById("lightboxModal"))
+  const galleryContainer = document.getElementById("galerija");
+  const galleryLoader = document.getElementById("ucitavacGalerije");
+  const loadMoreBtn = document.getElementById("ucitajJos");
+  const lightboxModal = document.getElementById("pregledSlikeModal")
+    ? new bootstrap.Modal(document.getElementById("pregledSlikeModal"))
     : null;
-  const lightboxImg = document.getElementById("lightboxImg");
-  const lightboxCaption = document.getElementById("lightboxCaption");
-  const prevBtn = document.getElementById("prevImage");
-  const nextBtn = document.getElementById("nextImage");
+  const lightboxImg = document.getElementById("pregledSlikeImg");
+  const lightboxCaption = document.getElementById("pregledSlikeNatpis");
+  const prevBtn = document.getElementById("prethodnaSlika");
+  const nextBtn = document.getElementById("sledecaSlika");
 
   let images = [];
   let currentIndex = 0;
@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
              data-caption="${img.caption || ''}"
              data-aos="zoom-in"
              data-aos-delay="${(start + index) * 100}"
-             class="img-fluid rounded shadow gallery-img" style="cursor:pointer;">
+             class="img-fluid rounded shadow slika-galerije" style="cursor:pointer;">
       `;
       const imageElement = col.querySelector("img");
       imageElement.addEventListener("click", () => {
@@ -161,8 +161,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Dinamičko učitavanje događaja
 document.addEventListener("DOMContentLoaded", () => {
-  const eventsContainer = document.getElementById("events");
-  const eventsLoader = document.getElementById("eventsLoader");
+  const eventsContainer = document.getElementById("dogadjaji");
+  const eventsLoader = document.getElementById("ucitavacDogadjaja");
 
   if (eventsContainer) {
     if (eventsLoader) eventsLoader.style.display = "block";
@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Dugme za povratak na vrh
 document.addEventListener("DOMContentLoaded", () => {
-  const backToTop = document.getElementById("backToTop");
+  const backToTop = document.getElementById("nazadNaVrh");
 
   if (backToTop) {
     window.addEventListener("scroll", () => {
